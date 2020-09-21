@@ -1,0 +1,2 @@
+# RichEditTextCopyToutiao
+android高仿今日头条富文本编辑
