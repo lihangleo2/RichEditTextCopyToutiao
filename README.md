@@ -1,5 +1,5 @@
 # RichEditTextCopyToutiao
-android高仿今日头条富文本编辑
+android高仿今日头条富文本编辑，如果图片显示不出来，可以去我的掘金[掘金地址](https://juejin.im/post/6874875969292173320/)
 
 <br>
 
