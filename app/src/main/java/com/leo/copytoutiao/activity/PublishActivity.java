@@ -199,7 +199,6 @@ public class PublishActivity extends AppCompatActivity implements View.OnClickLi
             public void onImageClick(String imageUrl) {
                 currentUrl = imageUrl;
                 popupWindow.showBottom(binding.getRoot(), 0.5f);
-                Log.e("看看是否有用把", imageUrl + "==========");
             }
         });
 
@@ -237,10 +236,8 @@ public class PublishActivity extends AppCompatActivity implements View.OnClickLi
 
         view.findViewById(R.id.linear_delete_pic).setOnClickListener(v -> {
             //删除图片
-            Log.e("这里居然不对啊么", binding.richEditor.getHtml());
 
             String removeUrl = "<img src=\"" + currentUrl + "\" alt=\"dachshund\" width=\"100%\"><br>";
-            Log.e("这里居然不对啊么", removeUrl);
 
             String newUrl = binding.richEditor.getHtml().replace(removeUrl, "");
             currentUrl = "";
@@ -389,9 +386,6 @@ public class PublishActivity extends AppCompatActivity implements View.OnClickLi
         } else if (resultCode == -1) {
             if (requestCode == 11) {
                 String outPath = data.getStringExtra(EXTRA_OUTPUT_URI);
-                Log.e("我看看这吧", binding.richEditor.getHtml());
-                Log.e("我看看这吧", outPath);
-                Log.e("我看看这吧", currentUrl);
                 if (!TextUtils.isEmpty(outPath)) {
                     String newHtml = binding.richEditor.getHtml().replace(currentUrl, outPath);
 

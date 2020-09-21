@@ -521,7 +521,6 @@ public class RichEditor extends WebView {
             final String url = request.getUrl().toString();
 
             String decode = Uri.decode(url);
-            Log.e("为什么整个就不会呢", decode);
 
             if (TextUtils.indexOf(url, CALLBACK_SCHEME) == 0) {
                 callback(decode);

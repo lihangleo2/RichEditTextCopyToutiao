@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.SslErrorHandler;
@@ -40,7 +39,6 @@ public class ShowArtActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("art", MODE_PRIVATE);
         String title = sharedPreferences.getString("title", "title");
         String content = sharedPreferences.getString("content", "");
-        Log.e("这是什么情况呢", content);
 
 //        content = "上海专业用户上海专业用户上海专业用户上海专业用户上海专业用户<p></p><p><img src=\"https://greenvalley.oss-cn-shanghai.aliyuncs.com/patient/270f8cbc044b4400bdb098d67b72a859_160_160.png\" style=\"max-width:100%;\"></p>";
         initWebView(content);
@@ -120,7 +118,6 @@ public class ShowArtActivity extends AppCompatActivity {
     public WebViewClient webViewClient = new WebViewClient() {
         @Override
         public void onPageFinished(WebView view, String url) {
-            Log.e("这里还是有问题啊", "onPageFinished == " + url);
             super.onPageFinished(view, url);
         }
 
@@ -132,7 +129,6 @@ public class ShowArtActivity extends AppCompatActivity {
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            Log.e("什么子情况咯", url + "===");
             return super.shouldOverrideUrlLoading(view, url);
         }
 
@@ -141,7 +137,6 @@ public class ShowArtActivity extends AppCompatActivity {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
             String url = request.getUrl().toString();
-            Log.e("什么子情况咯", url + "===");
             return super.shouldOverrideUrlLoading(view, request);
         }
 
