@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <!-- 状态栏字体颜色为黑色 -->
+    <style name="BlackFront_AppTheme" parent="WhiteFront_AppTheme">
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>  <!-- 加上这句后，状态栏的字体眼设置会变成黑色-->
+    </style>
+
+    <!-- 状态栏字体白色，背景颜色随意更改 -->
+    <style name="WhiteFront_AppTheme" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="colorPrimary">@color/black</item> <!-- 系统toolbar上的字体颜色值 -->
+        <item name="colorPrimaryDark">@color/white</item>   <!-- 状态栏背景颜色 -->
+        <item name="colorAccent">@color/colorPrimary</item>  <!-- 指的是手指按下，系统控件的颜色值 -->
+        <item name="android:windowBackground">@color/white</item> <!-- 设置app背景颜色的默认值 -->
+        <item name="android:navigationBarColor">@color/black</item> <!-- 底部导航栏的颜色值 -->
+    </style>
+
+
+    <!--设置-全屏-->
+    <style name="NoTitleFullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:navigationBarColor">@color/black</item> <!-- 底部导航栏的颜色值 -->
+    </style>
+
+
+    <style name="pop_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/translate_pop_in</item>
+        <item name="android:windowExitAnimation">@anim/translate_pop_out</item>
+    </style>
+</resources>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+
+            android:id="@+id/leoBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:onClick="@{onClickListener}"
+                    android:id="@+id/txt_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_15"
+                    android:text="取消"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:onClick="@{onClickListener}"
+                    android:id="@+id/txt_publish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_10"
+                    android:text="发布"
+                    android:textColor="@color/text_newapp_publish"
+                    android:textSize="@dimen/sp_16" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#EEEEEE" />
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="写个标题吧 (最多40个字)~"
+            android:maxLength="40"
+            android:paddingTop="@dimen/dp_15"
+            android:textColor="@color/black1b"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/dotted_line"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/bg_dotted_line"
+            android:layerType="software" />
+
+        <com.leo.copytoutiao.view.RichEditor
+            android:id="@+id/rich_Editor"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="#F0F0F0"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <HorizontalScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:onClick="@{onClickListener}"
+                        android:id="@+id/button_image"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:padding="@dimen/dp_4"
+                        android:src="@mipmap/picture_icon" />
+
+
+                    <ImageView
+                        android:onClick="@{onClickListener}"
+                        android:id="@+id/button_bold"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:padding="@dimen/dp_4"
+                        android:src="@mipmap/bold" />
+
+
+                    <ImageView
+                        android:onClick="@{onClickListener}"
+                        android:id="@+id/button_underline"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:padding="@dimen/dp_4"
+                        android:src="@mipmap/underline" />
+
+
+                    <ImageView
+                        android:onClick="@{onClickListener}"
+                        android:id="@+id/button_list_ul"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:padding="@dimen/dp_4"
+                        android:src="@mipmap/list_ul" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                    <ImageView
+                        android:onClick="@{onClickListener}"
+                        android:id="@+id/button_list_ol"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:padding="@dimen/dp_4"
+                        android:src="@mipmap/list_ol" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+
+            <ImageView
+                android:onClick="@{onClickListener}"
+                android:id="@+id/button_rich_undo"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:padding="@dimen/dp_4"
+                android:src="@mipmap/rich_undo" />
+
+
+            <ImageView
+                android:onClick="@{onClickListener}"
+                android:id="@+id/button_rich_do"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:padding="@dimen/dp_4"
+                android:src="@mipmap/rich_do" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

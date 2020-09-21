@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ucrop_photobox"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ucrop_color_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/ucrop_label_edit_photo"
+            android:textColor="@color/ucrop_color_toolbar_widget" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/ucrop_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/controls_wrapper"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="-12dp">
+
+        <ImageView
+            android:id="@+id/image_view_logo"
+            android:layout_width="@dimen/ucrop_default_crop_logo_size"
+            android:layout_height="@dimen/ucrop_default_crop_logo_size"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ucrop_vector_ic_crop"
+            tools:background="@drawable/ucrop_vector_ic_crop"
+            tools:ignore="ContentDescription,MissingPrefix" />
+
+        <com.yalantis.ucrop.view.UCropView
+            android:id="@+id/ucrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/controls_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/relative_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/txt_one"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="1:1"
+            android:background="@drawable/selector_shape"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_two"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/selector_shape"
+            android:text="3:4"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_three"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:background="@drawable/selector_shape"
+            android:text="4:3"
+            />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+
+        <TextView
+            android:id="@+id/txt_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="取消"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="完成"
+            android:layout_alignParentRight="true"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
