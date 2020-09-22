@@ -33,7 +33,9 @@ document.addEventListener("selectionchange", function() { RE.backuprange(); });
 // Initializations
 RE.callback = function() {
     window.location.href = "re-callback://" + encodeURIComponent(RE.getHtml());
-    RE.enabledEditingItems()
+    setTimeout(function() {
+               RE.enabledEditingItems();
+           },50)
 }
 
 RE.setHtml = function(contents) {
