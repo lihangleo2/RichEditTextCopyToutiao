@@ -6,6 +6,9 @@ android高仿今日头条富文本编辑，如果图片显示不出来，可以�
 **前言：** 在经历了几个月的项目期限。我们遇到了前端发布文章，要用到富文本编辑的功能。在一番衡量下最终用到了[richeditor-android](https://github.com/wasabeef/richeditor-android)第三方框架。实现原理就是通过webView和js实现前端富文本。有想了解的可以点开上面链接，研究研究。虽然richeditor-android已经帮我们实现了大部分核心内容，但是很多细节它都没有完善，这也是为什么他的issues达到170多的原因。也不知道它有没有停更。接下来是作者踩了N多坑之后，把功能基本补全。可以说是高仿“今日头条富文本编辑”。
 
 <br>
+首先非常感谢[richeditor-android富文本](https://github.com/wasabeef/richeditor-android)
+
+<br>
 
 ## 一、先来看看都实现了补全了哪些功能
 （这里不会重复richeditor-android原有功能，只会详细讲解补全的细节功能）
